@@ -1,0 +1,49 @@
+<%- include("partials/header") %>
+
+<style>
+   body {
+    background-image: url("https://mail.google.com/mail/u/0?ui=2&ik=9ca8d45fb3&attid=0.3&permmsgid=msg-a:r-5017070920732535087&th=182069b096ae350a&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ8-dl5ac54GiQBrm58YOpKlXy03YIpwGyAaFPo7pte03Vcz_qtopI-Dou32BscWPS0RzIPXWXDHjuy6XbTQIOLSp3gyFN0FGbWzjCdfBHAdubl6nu3bJf7UPI4&disp=emb&realattid=ii_l5nrfi3f1");
+}
+    </style>
+<body>
+    <form action="/register" method="post" class="needs-validation">
+    <div class="container login-detail w-25">
+        <center>
+            <img src="https://mail.google.com/mail/u/0?ui=2&ik=9ca8d45fb3&attid=0.1&permmsgid=msg-a:r6600001482716870157&th=182069e2159b567b&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ9bKK_9igG_bPB3oHdn-iCX_tlkM4hc4ZrViTkZ6zouv_IA19WsFy-jfMYU6F9y80w5iRoM3sFTIbopZQO3tIgvx6rh-_MB3Rb46tbi8adVMX859tgTYAFLyTI&disp=emb&realattid=ii_l5nrgu9p0" width="80%">
+        </center>
+        <br>
+
+        <label for="validationServer01" class="form-label">Username</label>
+        <input type="text" class="form-control" id="validationServer01" name="username" required>
+        
+
+        <label for="validationServer02" class="form-label">Password</label>
+        <input type="password" class="form-control" id="validationServer02" name="password" required>
+        
+        <label for="validationServer02" class="form-label">Re-enter Password</label>
+        <input type="password" class="form-control" id="validationServer02" required>
+        
+        <center>
+            <a href="/home" ><button class="btn btn-primary mt-2 btn-md" type="submit">Register</button></a>
+            <br><br>
+
+            <small class="font text-white m-3">Already Have an Account ? <a
+                    href="/">Login</a> </small>
+        </center>
+
+    </div>
+
+    <div class="footer mt-lg-5">
+        <center>
+            <span class="font text-white text-center align-content-center">This
+                mini project is developed as a part of Sirius Summer
+                Internship</span>
+        </center>
+    </div>
+</form> 
+
+
+
+<script src="../public/js/error.js"></script>
+
+    <%- include("partials/footer") %>

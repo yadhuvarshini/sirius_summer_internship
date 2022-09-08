@@ -1,0 +1,48 @@
+<%- include("./partials/header" ) %>
+
+    <style>
+    body {
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLrivG2AN5n7qW5WbPZwiUHCPT7IZ_NWx9NCLRvRTAFA&s");
+    }
+</style>
+    <body>
+        <form action="/" method="post">
+            <div class="container login-detail mt-lg-5 pt-lg-5 w-25">
+                <br>
+
+                <label class="form-label">Username</label>
+                <input type="text" name="username" id="validationCustom01" class="form-control" required>
+               
+
+                <label class="form-label">Password</label>
+                <input type="password" name="password"  id="validationCustom02" class="form-control" required>
+                
+                
+                <div class="invalid-feedback" id="validationCustom01 validationCustom02">
+                    Please choose a username.
+                </div>
+
+                <center>
+                    <a href="/show"><button class="btn btn-primary mt-2 btn-md
+                            text-white" type="submit"> Login </button></a>
+                    <br><br>
+
+                    <small class="font text-white m-3">New to Mybag.Shop ? <a
+                            href="/register">Register</a> </small>
+                </center>
+
+            </div>
+
+            <div class="footer mt-lg-5">
+                <center>
+                    <span class="font text-white text-center
+                        align-content-center">This
+                        mini project is developed as a part of Sirius Summer
+                        Internship</span>
+                </center>
+            </div>
+        </form>
+
+        <script src="../public/js/error.js"></script>
+        
+        <%- include("./partials/footer" ) %>

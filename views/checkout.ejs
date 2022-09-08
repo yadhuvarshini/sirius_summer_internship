@@ -1,0 +1,119 @@
+<%- include("partials/header" ) %>
+
+<style>
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffffff;
+    color: #f5f6f7;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    font-size: 16px;
+  }
+  
+  h1, p {
+    margin: 1em auto;
+    text-align: center;
+    color: #22223b;
+    width: 60vw;
+  }
+  
+  
+  form {
+    width: 60vw;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding: 2em 2em 1em 2em;
+    background-color: #9a8c98;
+    border-radius: 15px;
+  }
+  
+  ::placeholder {
+    color: #ffffff;
+  }
+  
+  fieldset {
+    border: none;
+    padding: 2rem 0;
+    border-bottom: 3px solid #3b3b4f;
+  }
+  
+  fieldset:last-of-type {
+    border-bottom: none;
+  }
+  
+  label {
+    display: block;
+    margin: 0.2rem 0;
+    padding-bottom: 10px;
+  }
+  
+  input,
+  textarea,
+  select {
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 2em;
+  }
+  
+  input, textarea, select {
+    background-color: #4a4e69;
+    border: 1px solid #4a4e69;
+    border-radius: 15px;
+    color: #ffffff;
+    font-family: Tahoma;
+    text-indent: 15px;
+  }
+  
+  
+  .inline {
+    width: auto;
+    margin: -2em 0.5em -2em 0;
+    vertical-align: middle;
+  }
+  
+  
+  input[type="submit"] {
+    display: block;
+    width: 100%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: #f2e9e4;
+    border-color: #f2e9e4;
+    color: #4a4e69;
+    min-width: 300px;
+  }
+  
+  input[type="file"] {
+    padding: 1px 2px;
+  }
+</style>
+
+<%- include("partials/navbar" ) %>
+
+<center>
+    <div class="container-fluid mt-4 " style="background-color:antiquewhite;padding:60px 60px 60px 60px;">
+        <div class="row">
+       <fieldset>
+       <form name="eform" action="#" method="post">
+        NAME:
+        <input type="text" id="v" name="v1"> <br> <br>
+        CARD NUMBER:
+        <input type="text" name="v2" id="w"> <br> <br>
+        CVV:
+        <input type="text" name="v3" id="x"> <br> <br>
+        EXPIRY DATE:
+        <input type="date" name="v4" id="y"> <br> <br>
+        <input type="submit" value="submit" onclick="">
+       </form>
+       </fieldset>
+        </div></div>
+    </center>
+
+    <script src="https://js.stripe.com/v3/"></script>
+</body>
+
+<%- include("partials/footer" ) %>

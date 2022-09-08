@@ -1,0 +1,33 @@
+<%- include("./partials/header") %>
+
+<style>
+    body {
+        background-image: url("https://mail.google.com/mail/u/0?ui=2&ik=9ca8d45fb3&attid=0.1&permmsgid=msg-a:r-5017070920732535087&th=182069b096ae350a&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ9gqvAjkCLasXoCPKRZwoCsC16JCiJxOhU4WqCCWo3qFoNtbAnOm8VPPnzjEegNX04VqdjRaB-1_alTW7K-AKGffGpGZbpCRG3oqARamFPa9HT1pJRTTiwvcw8&disp=emb&realattid=ii_l5nrff3v0");
+    }
+
+    img {
+        max-width: 50%;
+    }
+</style>
+
+<%- include("./partials/navbar") %>
+
+ <div class="container">
+
+    <div class="row">
+
+        <div class="col-lg-6">
+            <img src="<%= additems.image %>" width="40%">
+        </div>
+
+        <div class="col-lg-6">
+            <h3><%= additems.name %></h3><br>
+            <h5>By <%= additems.manufacturer %></h5><br>
+            <h6>rating <%= additems.rating %></h6><br>
+            <h6>price <%= additems.price %> </h6><br>
+        </div>
+    </div>
+
+ </div>
+
+<%- include("./partials/footer") %>

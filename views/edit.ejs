@@ -1,0 +1,74 @@
+<%- include("./partials/header") %>
+
+<%- include("./partials/navbar") %>
+
+ <div class="container">
+
+            <form method="POST" action="/home/<%= additems._id %>?_method=PUT" class="row g-3">
+               
+                <div class="col-md-4">
+                    <label class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name"
+                        name="home[name]" value="<%= additems.name %>">
+                </div>
+
+                <div class="col-md-4">
+                    <label class="form-label">Manufacturer</label>
+                    <input type="text" class="form-control" name="home[manufacturer]" value="<%= additems.manufacturer %>">
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-3">
+                        <label for="inputState" class="form-label">Category</label>
+                        <select class="form-select" name="home[category]">
+                            <option selected><%= additems.category %></option>
+                            <option>Men</option>
+                            <option>women</option>
+                            <option>others</option>
+
+                        </select>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label for="inputState" class=-"form-label">Rating</label>
+                        <select class="form-select" name="home[rating]">
+                            <option selected><%= additems.rating %></option>
+                            <option>5.0</option>
+                            <option>4.0</option>
+                            <option>3.0</option>
+                            <option>2.0</option>
+                            <option>1.0</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label">Price</label>
+                        <input type="number" class="form-control" name="home[price]" value="<%= additems.price %>">
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="form-label">Image Url</label>
+                        <input type="text" class="form-control" name="home[image]" value="<%= additems.image %>">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">About</label>
+                    <textarea class="form-control"
+                        id="exampleFormControlTextarea1" rows="3"
+                        placeholder="About Item" name="home[about]"><%= additems.about %></textarea>
+                </div>
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">add item</button>
+                </div>
+            </form>
+
+        </div>
+        <script src="../public/js/error.js"></script>
+
+<%- include("./partials/footer") %>

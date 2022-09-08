@@ -1,0 +1,68 @@
+<%- include("partials/header" ) %>
+
+    <style>
+    body {
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAsrCJ8g1eSAXAJknaTAx2xazvu_wsABOzNp6gdLmjvpe7tvvRiDP0Wr4tMqWp-Sc8tiI&usqp=CAU");
+    }
+
+    img {
+        max-width: 50%;
+    }
+</style>
+    
+<%- include("partials/navbar" ) %>
+
+
+    <a href="/home/new">Add new Product</a>
+   
+    <div class="container">
+        <div class="row">
+            <% additems.forEach(function(additems) { %>
+                
+                <div class="col-lg-3 mb-4">
+                        <div class="card" style="width: 70%;">
+                            <a href="/home/<%= additems._id %>"><img src="<%= additems.image %>" alt="" class="card-img-top img-fluid">
+                                <div class="card-body">
+                                    <h5 class="card-title"><%= additems.name %></h5>
+                                    <p class="card-text">
+                                                <h5> <span style="color: white;">Manufacturer Name: </span> <%= additems.manufacturer %></h5>
+                                                <br>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <h5><span style="color: white;">Price: </span> <%= additems.price %></h5>
+                                                    </div>
+
+                                                    <div class="col-6">
+                                                        <h5> <span style="color: white;">Ratings: </span> <%= additems.rating %></h5>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <h5> <span style="color: white;">Category: </span> <%= additems.category %></h5> 
+                                            
+                                    </p>
+                                       <button><a href="/home/<%= additems._id %>/edit">edit</a></button>
+                                    <br>
+                                    <form action = "/home/<%= additems._id %>?_method=DELETE" method="POST">
+                                        <button>Delete</button>
+                                    </form>
+                                    <form action = "/home/<%= additems._id %>/checkout">
+                                        <button>buy</button>
+                                    </form>
+                                   </p>
+                                </div>
+                            </a>
+                        </div>
+                </div>
+                <% }); %>
+        </div>                 
+    </div>
+
+    
+    
+<%- include("partials/footer" ) %>
+
+
+
+    
+    
+      
